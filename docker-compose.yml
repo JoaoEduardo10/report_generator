@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  report_postegres:
+    container_name: report_generator
+    image: postgres
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      POSTGRES_PASSWORD: root
+      POSTGRES_USER: eduardo
+      POSTGRES_DB: report_generator
+    volumes:
+      - ./data-system:/data/postgres
+    ports:
+      - "5432:5432"

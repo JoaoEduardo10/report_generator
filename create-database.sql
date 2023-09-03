@@ -1,0 +1,1 @@
+CREATE DATABASE "granite_db_test";
